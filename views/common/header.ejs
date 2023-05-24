@@ -6,13 +6,13 @@
         <a class="nav-link active" href="/">
           Home <span class="sr-only">(current)</span>
         </a>
-        <a class="nav-link" href="search-tastings"> Search Tastings </a>
+        <a class="nav-link" href="search-tastings"> My Search Tastings </a>
         <a class="nav-link" href="tasters"> Tasters</a>
         <a class="nav-link" href="tastings"> Tastings</a>
         <% if(user) { %>
-         <a class="nav-link" href="saved-tastings">My Saved Tastings</a>
+         <a class="nav-link" href="saved-tastings">Saved Tastings</a>
         <a class="nav-link" href="create-tasting"> Write a Review </a>
-        <a class="nav-link" href="logout"> <%= user.email %> (Logout) </a> <%
+        <a class="nav-link" href="logout"> <%= user.email %> (Click to Logout) </a> <%
         }%> <% if(!user) { %>
         <a class="nav-link" href="login"> Login </a>
         <a class="nav-link" href="join"> Register </a>

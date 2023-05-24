@@ -4,9 +4,11 @@ const path = require("path");
 const mongoose = require("mongoose");
 const chalk = require("chalk");
 const bodyParser = require("body-parser");
+/*const morgan = require("morgan");*/
 const countriesModel = require("./models/Country");
 const expressSession = require("express-session");
 const User = require("./models/User");
+
 
 /**
  * Controllers (route handlers).
@@ -21,7 +23,7 @@ const savedTastingController = require("./controllers/savedTasting");
 
 const app = express();
 app.set("view engine", "ejs");
-
+/*app.use(morgan('tiny'));*/
 /**
  * notice above we are using dotenv. We can now pull the values from our environment
  */
@@ -31,9 +33,6 @@ const { PORT, MONGODB_URI } = process.env;
 /**
  * connect to database
  */
-
-
-
 
 mongoose.connect(MONGODB_URI, { useNewUrlParser: true });
 mongoose.connection.on("error", (err) => {
